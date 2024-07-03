@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
-        System.out.println("--- listado de alumnos ---");
+        System.out.println("--- Listado de Alumnos ---");
         while (true) {
             mostrarOpciones();
             if (!ejecutarOpcion(teclado)) {
@@ -43,7 +43,7 @@ public class Main {
     }
 
     private static void writeList(Scanner teclado, String fileName) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true)); // Modo de agregar (append)
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName)); // Modo de sobreescritura
 
         System.out.println("Indica los nombres que quieras añadir separados por comas:");
 
